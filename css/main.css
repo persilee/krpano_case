@@ -1,0 +1,14 @@
+#mousepos {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    width: 100px;
+    background-color: rgba(58, 99, 164, 0.86);
+    border: 1px solid rgba(58, 99, 164, 0.92);
+    color: #ffffff;
+    padding: 6px 16px;
+}
+
+#mousepos h4 {
+    margin: 6px 0;
+}

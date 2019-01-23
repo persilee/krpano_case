@@ -1,0 +1,46 @@
+ <krpano version="1.19" title="全景">
+
+ 	<style name="tooltip" fillcolor ="0x2ea0c0c" fillalpha ="0.36"  borderwidth ="1.0" bordercolor ="0xea0c0c"  borderalpha ="0.8" fadeintime="0.20" fadeouttime="0.300" fadeincurve="1.100" fadeoutcurve="0.700" onhover="" ondown="" onup="" onclick="" flying="0"/>
+
+    <scene name="scene_preview_2" title="1 栋" onstart="" havevrimage="true" thumburl="../panos/preview_2.tiles/thumb.jpg" lat="" lng="" heading="">
+
+        <view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="160.937" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+        <preview url="../panos/preview_2.tiles/preview.jpg" />
+
+        <image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+            <level tiledimagewidth="256" tiledimageheight="256">
+                <cube url="../panos/preview_2.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+            </level>
+        </image>
+
+        <image if="webvr.isenabled">
+            <cube url="../panos/preview_2.tiles/vr/pano_%s.jpg" />
+        </image>
+
+        <hotspot name="scene1" text="1 栋" style="skin_hotspotstyle|skin_tooltips" ath="0" atv="12.248" linkedscene="scene_preview_2" onclick="goto(scene_preview_2);" onloaded="do_crop_animation(128,128, 18);add_all_the_time_tooltip();"/>
+
+        <hotspot name="build_1_floor11" style="tooltip" title="11" alpha="0.0" capture="false" onover="floorImage(build_1_floor11)"
+          onout="onoutevent(build_1_floor11);" onclick="floor_onclick(ifram_floor_1002,layer_ifram_floor_001,1002,467195,2,ifram_room_1002,layer_ifram_room_1002);">
+           <point ath="43.1" atv="18.8"/>
+           <point ath="36.3" atv="20.5"/>
+           <point ath="34.2" atv="19.5"/>
+           <point ath="19.7" atv="21.3"/> 
+           <point ath="18.3" atv="20.1"/>
+           <point ath="16.7" atv="20.2"/>
+           <point ath="17.1" atv="23.9"/>  
+           <point ath="19.1" atv="23.8"/>      
+           <point ath="19.6" atv="25.7"/>     
+           <point ath="34.2" atv="23.2"/> 
+           <point ath="36.1" atv="24"/>   
+           <point ath="42.9" atv="22"/> 
+        </hotspot>
+
+        <!-- 楼层信息 -->
+        <layer name="layer_ifram_floor_001" type="container" align="righttop" edge="righttop" x="200" y="15%" alpha="0.9" visible="false">
+            <layer name="ifram_floor_001" url="../images/base.png" x="52%" y="50%"  alpha="0.9"  onloaded="delayedcall(0,add_iframe('view/FloorInfo.html', 170, 280));"/>
+            <layer name="ifram_floor_close_001" url="../images/close.png" width="16" height="16" x="155" onclick="closelayer(layer_ifram_floor_001);"/>
+        </layer>
+
+    </scene>
+</krpano>
