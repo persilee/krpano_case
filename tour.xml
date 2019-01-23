@@ -131,6 +131,10 @@
 		caller.sprite.style.overflowX = "auto";
 	</action>
 
+	<action name="showTip">
+		showtext('aaa', hotspot_TOOLTIPS);
+	</action>
+
 	<scene name="scene_preview" title="preview" onstart="" havevrimage="true" thumburl="panos/preview.tiles/thumb.jpg" lat="" lng="" heading="">
 
 		<view hlookat="11.845" vlookat="37.301" fovtype="MFOV" fov="116.937" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
@@ -147,7 +151,7 @@
 			<cube url="panos/preview.tiles/vr/pano_%s.jpg" />
 		</image>
 
-		<hotspot name="spot1" text="1 栋" style="skin_hotspotstyle|skin_tooltips" ath="-9.478" atv="40.248" linkedscene="scene_preview_2" onclick="goto(scene_preview_2);" onloaded="do_crop_animation(128,128, 18);add_all_the_time_tooltip();"/>
+		<hotspot name="spot1" text="1 栋" style="skin_hotspotstyle|skin_tooltips" ath="-9.478" atv="40.248" linkedscene="scene_preview_2" onloaded="do_crop_animation(128,128, 18);add_all_the_time_tooltip();"/>
 
 		<hotspot name="spot2" text="2 栋" style="skin_hotspotstyle|skin_tooltips" ath="27.478" atv="41.248" linkedscene="scene_preview_2" onloaded="do_crop_animation(128,128, 18);add_all_the_time_tooltip();"/>
 

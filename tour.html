@@ -71,19 +71,13 @@
 	}
 
 	//设置楼层的点击事件
-	function floor_onclick_js(framname, layername, buildingID, unitID, floor, framnameroom, layernameroom,photoframe,photolayer){
+	function floor_onclick_js(framname, layername, floor){
 		krpano.set("layer[" + layername + "].visible", true);
-
+		
 		var iframefloorlayer = this.frames[framname];
-		var iframephotolayer = this.frames[photoframe];
-
-		if(iframephotolayer != null){
-			iframephotolayer.location = 'view/PhotoView.html?floor=' + floor +'&layer=' + photolayer;
-		}
 
 		if(iframefloorlayer != null) {
-			iframefloorlayer.location = 'view/FloorInfo.html?floor=' + floor + '&buildingID=' + buildingID + '&unitID=' +
-				unitID + '&framname=' + framnameroom + '&layername=' + layernameroom;
+			iframefloorlayer.location = 'view/FloorInfo.html?floor=' + floor;
 		}
 	}
 </script>

@@ -299,6 +299,7 @@
 	       />
 
 
+
 	<!-- the tooltip textfield -->
 	<layer name="skin_tooltip" keep="true"
 	       type="text"
