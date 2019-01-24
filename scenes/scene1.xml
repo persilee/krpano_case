@@ -1,6 +1,6 @@
  <krpano version="1.19" title="全景">
 
- 	<style name="tooltip" fillcolor ="0x2ea0c0c" fillalpha ="0.36"  borderwidth ="1.0" bordercolor ="0xea0c0c"  borderalpha ="0.8" fadeintime="0.20" fadeouttime="0.300" fadeincurve="1.100" fadeoutcurve="0.700" onhover="" ondown="" onup="" onclick="" flying="0" onloaded="showTip();"/>
+ 	<style name="layer_fill" fillcolor ="0x2ea0c0c" fillalpha ="0.36"  borderwidth ="1.0" bordercolor ="0xea0c0c"  borderalpha ="0.8" fadeintime="0.20" fadeouttime="0.300" fadeincurve="1.100" fadeoutcurve="0.700" onhover="" ondown="" onup="" onclick="" flying="0"/>
 
     <scene name="scene_preview_2" title="1 栋" onstart="" havevrimage="true" thumburl="../panos/preview_2.tiles/thumb.jpg" lat="" lng="" heading="">
 
@@ -20,7 +20,7 @@
 
         <hotspot name="scene1" text="1 栋" style="skin_hotspotstyle|skin_tooltips" ath="0" atv="12.248" onloaded="do_crop_animation(128,128, 18);add_all_the_time_tooltip();"/>
 
-        <hotspot name="build_1_floor11" style="tooltip" title="11" alpha="0.0" capture="false" onover="floorImage(build_1_floor11)"
+        <hotspot name="build_1_floor11" style="layer_fill" tooltip="1栋 11层" alpha="0.0" capture="false" onover="floorImage(build_1_floor11)"
           onout="onoutevent(build_1_floor11);" onclick="floor_onclick(ifram_floor_001,layer_ifram_floor_001,11);">
            <point ath="43.1" atv="18.8"/>
            <point ath="36.3" atv="20.5"/>
@@ -36,7 +36,7 @@
            <point ath="42.9" atv="22"/> 
         </hotspot>
 
-        <hotspot name="build_1_floor10" style="tooltip" title="10" alpha="0.0" capture="false" onover="floorImage(build_1_floor10)"
+        <hotspot name="build_1_floor10" style="layer_fill" tooltip="1栋 10层" alpha="0.0" capture="false" onover="floorImage(build_1_floor10)"
           onout="onoutevent(build_1_floor10);" onclick="floor_onclick(ifram_floor_001,layer_ifram_floor_001,10);">
            <point ath="42.7" atv="22"/>
            <point ath="36" atv="24"/>
@@ -52,7 +52,7 @@
            <point ath="42.9" atv="24.8"/> 
         </hotspot>
 
-        <hotspot name="build_1_floor9" style="tooltip" title="9" alpha="0.0" capture="false" onover="floorImage(build_1_floor9)"
+        <hotspot name="build_1_floor9" style="layer_fill" tooltip="1栋 9层" alpha="0.0" capture="false" onover="floorImage(build_1_floor9)"
           onout="onoutevent(build_1_floor9);" onclick="floor_onclick(ifram_floor_001,layer_ifram_floor_001,9);">
            <point ath="43.1" atv="24.8"/>
            <point ath="36.4" atv="27.1"/>
@@ -68,7 +68,7 @@
            <point ath="43.1" atv="27.3"/> 
         </hotspot>
 
-        <hotspot name="build_1_floor8" style="tooltip" title="8" alpha="0.0" capture="false" onover="floorImage(build_1_floor8)"
+        <hotspot name="build_1_floor8" style="layer_fill" tooltip="1栋 8层" alpha="0.0" capture="false" onover="floorImage(build_1_floor8)"
           onout="onoutevent(build_1_floor8);" onclick="floor_onclick(ifram_floor_001,layer_ifram_floor_001,8);">
            <point ath="43.1" atv="27.8"/>
            <point ath="36.4" atv="30.1"/>
